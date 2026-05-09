@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Right Solution</title>
+
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #2f7a9b;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 70px 20px;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop')
+        center/cover;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .hero p {
+      font-size: 22px;
+      max-width: 800px;
+      margin: auto;
+      color: #ddd;
+    }
+
+    /* SECTION TITLE */
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      color: #fff;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+
+    .section-title h2::after {
+      content: '';
+      width: 70px;
+      height: 4px;
+      background: #ffd54f;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: rgba(255,255,255,0.08);
+      border: 2px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      overflow: hidden;
+      text-align: center;
+      transition: 0.3s;
+      backdrop-filter: blur(5px);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: #ffd54f;
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: #fff;
+      padding: 15px;
+    }
+
+    .service-card h3 {
+      padding: 18px;
+      font-size: 24px;
+      color: #ffd54f;
+    }
+
+    /* ABOUT */
+    .about {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-text {
+      background: rgba(0,0,0,0.2);
+      padding: 35px;
+      border-radius: 20px;
+    }
+
+    .about-text h3 {
+      font-size: 34px;
+      margin-bottom: 20px;
+      color: #ffd54f;
+    }
+
+    .about-text ul {
+      padding-left: 20px;
+    }
+
+    .about-text li {
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+
+    .office-card {
+      text-align: center;
+    }
+
+    .office-card img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 25px;
+      border: 5px solid rgba(255,255,255,0.2);
+    }
+
+    .office-card h3 {
+      margin-top: 20px;
+      font-size: 32px;
+      color: #ffd54f;
+    }
+
+    /* CONTACT */
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .contact-box {
+      background: rgba(0,0,0,0.25);
+      padding: 35px;
+      border-radius: 20px;
+    }
+
+    .contact-box h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #ffd54f;
+    }
+
+    .contact-info p {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .contact-info i {
+      color: #ffd54f;
+      width: 30px;
+    }
+
+    .quote {
+      font-size: 26px;
+      font-weight: bold;
+      color: #fff;
+      padding-top: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 25px;
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px) {
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <h1>RIGHT SOLUTION</h1>
+      <p>
+        Innovation in engineering for a sustainable future.
+      </p>
+    </div>
+  </header>
+
+  <!-- SERVICES -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Products & Services</h2>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <img src="https://i.imgur.com/lP9Q4VY.png" alt="CCTV Camera">
+          <h3>CCTV Camera</h3>
+        </div>
+
+        <div class="service-card">
+          <img src="https://i.imgur.com/2hz6LqA.png" alt="Fire Fighting">
+          <h3>Fire Fighting System</h3>
+        </div>
+
+        <div class="service-card">
+          <img src="https://i.imgur.com/e2m2KxJ.png" alt="IPS UPS">
+          <h3>IPS / UPS</h3>
+        </div>
+
+        <div class="service-card">
+          <img src="https://i.imgur.com/6G6C6ZQ.png" alt="PABX">
+          <h3>PABX / Intercom</h3>
+        </div>
+
+        <div class="service-card">
+          <img src="https://i.imgur.com/TsV0SC6.png" alt="VRF AC">
+          <h3>VRF Air-Conditioning System</h3>
+        </div>
+
+        <div class="service-card">
+          <img src="https://i.imgur.com/qe7yYyS.png" alt="Motion Sensor">
+          <h3>Motion Sensor</h3>
+        </div>
+
+        <div class="service-card">
+          <img src="https://i.imgur.com/L6QvR0X.png" alt="Motor Controller">
+          <h3>Motor Controller</h3>
+        </div>
+
+        <div class="service-card">
+          <img src="https://i.imgur.com/M9y8e2A.png" alt="Industrial Machine">
+          <h3>Industrial Machine Service & Repairing</h3>
+        </div>
+
+        <div class="service-card">
+          <img src="https://i.imgur.com/4nhL7XX.png" alt="Solar Panel">
+          <h3>Solar Panel</h3>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section>
+    <div class="container">
+      <div class="about">
+
+        <div class="about-text">
+          <h3>What We Do</h3>
+
+          <ul>
+            <li>CCTV Camera Supply, Install & Maintenance</li>
+            <li>HVAC System Supply & Service</li>
+            <li>Industrial Machine Service & Repairing</li>
+            <li>Commercial & Residential Fire Fighting System</li>
+            <li>PABX & Intercom System Setup</li>
+            <li>Motor Controller Installation</li>
+            <li>IPS/UPS Supply & Maintenance</li>
+            <li>Motion Sensor Installation</li>
+            <li>Solar Panel Setup & Service</li>
+            <li>All kinds of MEP Work</li>
+          </ul>
+
+          <div class="quote">
+            We try to complete every task in a standard & professional manner.
+          </div>
+        </div>
+
+        <div class="office-card">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop" alt="Office">
+          <h3>Corporate Office</h3>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Contact Us</h2>
+      </div>
+
+      <div class="contact-wrapper">
+
+        <div class="contact-box">
+          <h3>Contact Info</h3>
+
+          <div class="contact-info">
+            <p><i class="fa-solid fa-phone"></i> +8801805-207666</p>
+            <p><i class="fa-solid fa-phone"></i> +8801842-345641</p>
+            <p><i class="fa-solid fa-envelope"></i> rightsolution.bd2016@gmail.com</p>
+            <p><i class="fa-solid fa-globe"></i> www.rightsolutionsbd.com</p>
+            <p>
+              <i class="fa-solid fa-location-dot"></i>
+              Road #1, House #42, Shop #4, Adorshobag,
+              Konapara, Matuail, Jatrabari, Dhaka 1362
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-box" style="text-align:center;">
+          <h3>RIGHT SOLUTION</h3>
+          <p style="font-size:22px; margin-top:20px;">
+            Innovation in engineering for a sustainable future.
+          </p>
+
+          <div style="margin-top:35px;">
+            <a href="tel:+8801805207666"
+              style="display:inline-block; padding:14px 35px; background:#ffd54f; color:#000; border-radius:50px; font-weight:bold;">
+              Call Now
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Right Solution. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
